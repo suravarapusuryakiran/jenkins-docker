@@ -14,4 +14,7 @@ services:
   web:
     image: httpd
     volumes:
+      - /var/jenkins_home   # adding to intract with docker
+      - /var/run/docker.sock:/var/run/docker.sock  # adding to intract with docker
       - ./html:/usr/local/apache2/htdocs/
+
